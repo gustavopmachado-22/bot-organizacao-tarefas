@@ -1,7 +1,7 @@
 import json
 import os
 
-# Nome do arquivo onde as tarefas serão salvas (Persistência de dados)
+# Nome do arquivo onde as tarefas serão salvas
 ARQUIVO_TAREFAS = "tarefas.json"
 
 def carregar_tarefas():
