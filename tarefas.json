@@ -1,0 +1,14 @@
+[
+    {
+        "descricao": "Comprar Café",
+        "concluida": false
+    },
+    {
+        "descricao": "Comprar Bolacha",
+        "concluida": false
+    },
+    {
+        "descricao": "Comprar suco",
+        "concluida": false
+    }
+]
