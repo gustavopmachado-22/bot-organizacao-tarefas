@@ -25,7 +25,9 @@ def menu():
         print("="*30)
         print("1. Adicionar Tarefa")
         print("2. Listar Tarefas")
-        print("3. Sair")
+        print("3. Concluir Tarefa")
+        print("4. Remover Tarefa")
+        print("5. Sair")
         print("="*30)
         
         opcao = input("Escolha uma opção: ")
@@ -48,6 +50,44 @@ def menu():
                 print(f"{i+1}. {status} {t['descricao']}")
                 
         elif opcao == "3":
+            if not tarefas:
+                print("\n❌ Nenhuma tarefa cadastrada para concluir.")
+                continue
+            print("\n📋 SELECIONE A TAREFA PARA CONCLUIR:")
+            for i, t in enumerate(tarefas):
+                status = "[X]" if t["concluida"] else "[ ]"
+                print(f"{i+1}. {status} {t['descricao']}")
+            try:
+                indice = int(input("Digite o número da tarefa: ")) - 1
+                if 0 <= indice < len(tarefas):
+                    tarefas[indice]["concluida"] = True
+                    salvar_tarefas(tarefas)
+                    print("✔ Tarefa marcada como concluída!")
+                else:
+                    print("⚠ Número inválido!")
+            except ValueError:
+                print("⚠ Entrada inválida! Digite apenas números.")
+
+        elif opcao == "4":
+            if not tarefas:
+                print("\n❌ Nenhuma tarefa cadastrada para remover.")
+                continue
+            print("\n📋 SELECIONE A TAREFA PARA REMOVER:")
+            for i, t in enumerate(tarefas):
+                status = "[X]" if t["concluida"] else "[ ]"
+                print(f"{i+1}. {status} {t['descricao']}")
+            try:
+                indice = int(input("Digite o número da tarefa: ")) - 1
+                if 0 <= indice < len(tarefas):
+                    tarefa_removida = tarefas.pop(indice)
+                    salvar_tarefas(tarefas)
+                    print(f"✔ Tarefa '{tarefa_removida['descricao']}' removida com sucesso!")
+                else:
+                    print("⚠ Número inválido!")
+            except ValueError:
+                print("⚠ Entrada inválida! Digite apenas números.")
+
+        elif opcao == "5":
             print("\nEncerrando o bot... Até logo!")
             break
         else:
@@ -55,3 +95,4 @@ def menu():
 
 if __name__ == "__main__":
     menu()
+    
