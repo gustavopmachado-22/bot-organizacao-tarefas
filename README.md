@@ -5,7 +5,7 @@ Projeto prático desenvolvido para a disciplina de **Prática Profissional em AD
 ## 🚀 Funcionalidades Atuais
 - [x] **Adicionar Tarefas:** Cadastro de novas atividades com persistência.
 - [x] **Listar Tarefas:** Visualização organizada das pendências gravadas.
-- [ ] **Concluir Tarefas:** (Planejado para a iteração 2).
+- [x] **Concluir Tarefas:** (Planejado para a iteração 2).
 - [ ] **Remover Tarefas:** (Planejado para a iteração 2).
 
 ## 🛠️ Tecnologias e Ferramentas
