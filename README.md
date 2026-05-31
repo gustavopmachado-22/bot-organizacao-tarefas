@@ -6,7 +6,7 @@ Projeto prático desenvolvido para a disciplina de **Prática Profissional em AD
 - [x] **Adicionar Tarefas:** Cadastro de novas atividades com persistência.
 - [x] **Listar Tarefas:** Visualização organizada das pendências gravadas.
 - [x] **Concluir Tarefas:** (Planejado para a iteração 2).
-- [ ] **Remover Tarefas:** (Planejado para a iteração 2).
+- [x] **Remover Tarefas:** (Planejado para a iteração 2).
 
 ## 🛠️ Tecnologias e Ferramentas
 - **Linguagem:** [Python 3.x](https://www.python.org)
